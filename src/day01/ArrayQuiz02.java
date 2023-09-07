@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ArrayQuiz02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] dongBang = {"영웅재중", "최강창민", "시아준수", "믹키유천", "유노윤호" };
+        String[] dongBang = {"영웅재중", "최강창민", "시아준수", "믹키유천", "유노윤호"};
         System.out.println("* 변경 전 정보 : " + Arrays.toString(dongBang));
         System.out.println("- 수정할 멤버의 이름을 입력하세요.");
         // 배열 생성

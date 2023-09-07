@@ -1,5 +1,6 @@
 package day01;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -17,6 +18,7 @@ public class ArrayQuiz01 {
             String foods = sc.nextLine();
 
             if (foods.equals("그만")) {
+                System.out.println(Arrays.toString(foodList));
                 break;
             } else {
                 String[] newArr = new String[foodList.length + 1];
@@ -25,6 +27,7 @@ public class ArrayQuiz01 {
                 }
                 newArr[newArr.length - 1] = foods;
                 foodList = newArr;
+                newArr = null;
             }
         }
 
