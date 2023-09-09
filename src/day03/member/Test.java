@@ -16,7 +16,7 @@ public class Test {
         boolean flag1 = mr.isDuplicatedEmail(email);
         System.out.println("flag1 = " + flag1);
 
-        Member foundMember = mr.findMemberByEmail(email);
+        Member foundMember = mr.findMemberByEmail(email, false);
         try {
             System.out.println("foundMember.inform() = " + foundMember.inform());
         } catch (NullPointerException e) {
@@ -24,9 +24,9 @@ public class Test {
         }
 
 
-        mr.removeMember(email);
-        mr.removeMember("xxx@vvv.com");
-        
+        mr.deleteMember(email, false);
+        mr.deleteMember("xxx@vvv.com", false);
+
 
         mr.showMembers();
         mr.printRemoveMembers();
