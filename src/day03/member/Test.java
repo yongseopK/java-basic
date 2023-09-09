@@ -10,6 +10,26 @@ public class Test {
 
         mr.showMembers();
 
+        System.out.println("==================");
+
+        String email = "ttt@yyy.om";
+        boolean flag1 = mr.isDuplicatedEmail(email);
+        System.out.println("flag1 = " + flag1);
+
+        Member foundMember = mr.findMemberByEmail(email);
+        try {
+            System.out.println("foundMember.inform() = " + foundMember.inform());
+        } catch (NullPointerException e) {
+            System.out.println("해당 이메일을 가진 유저는 없음");
+        }
+
+
+        mr.removeMember(email);
+        mr.removeMember("xxx@vvv.com");
+        
+
+        mr.showMembers();
+        mr.printRemoveMembers();
     }
 
 
