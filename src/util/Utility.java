@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Utility {
 
     // 입력기능 유틸성 메서드
-    Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     public static void makeLine() {
         System.out.println("======================");
@@ -16,4 +16,6 @@ public class Utility {
         System.out.print(message);
         return sc.nextLine();
     }
+
+
 }

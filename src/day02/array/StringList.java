@@ -9,7 +9,7 @@ public class StringList {
 
     // 생성자를 통해 배열을 초기화
 
-    StringList() {
+    public StringList() {
         sArr = new String[0];
     }
 
@@ -21,16 +21,15 @@ public class StringList {
     }
 
     // 배열 맨 끝 데이터 제거
-    void pop() {
+    public void pop() {
         String[] temp = new String[sArr.length - 1];
         for (int i = 0; i < temp.length; i++) {
             temp[i] = sArr[i];
         }
         sArr = temp;
-        temp = null;
     }
 
-    void push(String newData) {
+    public void push(String newData) {
         String[] temp = new String[sArr.length + 1];
 
         for (int i = 0; i < sArr.length; i++) {
@@ -126,4 +125,11 @@ public class StringList {
     void printArray() {
         System.out.println(Arrays.toString(sArr));
     }
+
+    public String[] getsArr() {return sArr; }
 }
+
+
+
+
+
