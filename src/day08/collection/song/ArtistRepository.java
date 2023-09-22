@@ -1,11 +1,6 @@
 package day08.collection.song;
 
-import book.BookUser;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
 
 public class ArtistRepository {
 
@@ -60,6 +55,17 @@ public class ArtistRepository {
     }
 
 
+    // 노래 목록을 찾아서 출력하는 기능
+    public void showSongList(String artistName) {
+        Artist artist = findArtistByName(artistName);
+        Set<String> songList = artist.getSongList();
+        List<String> songs = new ArrayList<>(songList);
+
+        for (int i = 0; i < songList.size(); i++) {
+            System.out.printf("* %d. %s\n", i+1, songs.get(i));
+        }
+
+    }
 }
 
 

@@ -33,6 +33,7 @@ public class ArtistView {
                     insertProcess();
                     break;
                 case "2":
+                    searchProcess();
                     break;
                 case "3":
                     System.out.println("# 프로그램을 종료합니다.");
@@ -42,6 +43,21 @@ public class ArtistView {
                     System.out.println("# 메뉴를 잘못 선택하셨습니다.");
 
             }
+        }
+    }
+
+    /** 2번 메뉴에 대한 입출력 실행 내용*/
+    private static void searchProcess() {
+        System.out.println("\n# 검색할 가수명을 입력하세요.");
+        String artistName = input("- 가수명 : ");
+
+        if(ar.isRegistered(artistName)) {
+            System.out.printf("\n# %s님의 노래목록 \n", artistName);
+            makeLine();
+
+            ar.showSongList(artistName);
+        } else {
+            System.out.println("\n# 해당 가수는 등록되지 않았습니다.");
         }
     }
 
