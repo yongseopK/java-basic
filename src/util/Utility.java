@@ -8,7 +8,7 @@ public class Utility {
     static Scanner sc = new Scanner(System.in);
 
     public static void makeLine() {
-        System.out.println("======================");
+        System.out.println("=================================");
     }
 
     // 문자열을 입력받는 기능
