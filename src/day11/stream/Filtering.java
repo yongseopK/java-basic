@@ -25,23 +25,23 @@ public class Filtering {
         //dishInVegitarian.forEach(dish -> System.out.println(dish));
 
         menuList.stream()
-                .filter(dish -> dish.isVegeterian())
+                .filter(Dish::isVegeterian)
                 .collect(Collectors.toList())
-                .forEach(dish -> System.out.println(dish));
+                .forEach(System.out::println);
 
         System.out.println("==== 육류이면서 600칼로리 미만 요리 필터링 ====");
 
         menuList.stream()
                 .filter(dish -> dish.getType() == Dish.Type.MEAT && dish.getCalories() < 600)
                 .collect(Collectors.toList())
-                .forEach(d -> System.out.println(d));
+                .forEach(System.out::println);
 
         System.out.println("=== 요리중에 요리이름이 4글자인 요리만 필터링 ===");
 
         menuList.stream()
                 .filter(dish -> dish.getName().length() == 4)
                 .collect(Collectors.toList())
-                .forEach(d -> System.out.println(d));
+                .forEach(System.out::println);
 
         System.out.println("=== 요리에서 300칼로리보다 큰 요리만 필터링 ===");
 
@@ -49,7 +49,7 @@ public class Filtering {
                 .filter(dish -> dish.getCalories() > 300)
                 .limit(3)   // 상위 Top3 추출
                 .collect(Collectors.toList())
-                .forEach(d -> System.out.println(d));
+                .forEach(System.out::println);
 
         Utility.makeLine();
 
@@ -57,7 +57,7 @@ public class Filtering {
                 .filter(dish -> dish.getCalories() > 300)
                 .skip(2)
                 .collect(Collectors.toList())
-                .forEach(d -> System.out.println(d));
+                .forEach(System.out::println);
 
         System.out.println("=== 메뉴 목록에서 처음 등장하는 2개의 생선요리 필터링 ==");
 
